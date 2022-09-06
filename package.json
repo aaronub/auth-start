@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "npm run build-watch & npm run start-server ",
+    "build-watch": "webpack -w",
+    "start-server": "nodemon --watch server -e js,html server/index.js"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "pg": "^8.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sequelize": "^6.21.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.10",
+    "@babel/preset-env": "7.17.10",
+    "@babel/preset-react": "7.16.7",
+    "@babel/preset-stage-2": "^7.8.3",
+    "babel-loader": "8.2.5",
+    "webpack": "^5.72.0",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
