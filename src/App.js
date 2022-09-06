@@ -1,14 +1,34 @@
 import React from "react";
+import SignIn from "./components/SignIn";
+import axios from "axios";
 
 
-function App(){
+function App() {
+    const [sign, setSign] = React.useState("");
 
+    const attemptTokenLogin = async () => {
+        const token = window.localStorage.getItem('token')
 
-    return(
+        if (token) {
+            const response = await axios.get('/api/auth', {
+                    headers: {
+                        authorization: token
+                    }
+                }
+            )
+
+            setSign({auth: response.data})
+        }
+    }
+
+    React.useEffect(()=>{
+        attemptTokenLogin();
+    },[])
+
+    return (
         <>
-            <div>Test Your App</div>
+            {!sign.id ? <SignIn/> : <div>Welcome {sign.username}</div>}
         </>
-
     )
 }
 

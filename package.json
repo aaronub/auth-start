@@ -5,14 +5,22 @@
     "start-server": "nodemon --watch server -e js,html server/index.js"
   },
   "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.27.2",
     "babel": "^6.23.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "^4.18.1",
+    "fs": "^0.0.1-security",
     "nodemon": "^2.0.19",
+    "path": "^0.12.7",
     "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sequelize": "^6.21.4",
+    "url": "^0.11.0",
+    "util": "^0.12.4",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
